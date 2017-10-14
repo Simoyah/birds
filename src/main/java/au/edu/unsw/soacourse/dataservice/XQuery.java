@@ -19,15 +19,17 @@ import net.sf.saxon.xqj.SaxonXQDataSource;
 
 public class XQuery{
 	
-	public static  List<queryResult> xQueryResult(String input ) throws FileNotFoundException, XQException{
+	public static  List<queryResult> xQueryResult(InputStream input ) throws FileNotFoundException, XQException{
 		 List<queryResult> list = new ArrayList<queryResult>();
 		
 		 String res = "";
 	    
-		  InputStream inputStream = new FileInputStream(new File(input));
+		 // InputStream inputStream = new FileInputStream(new File(input));
 		  XQDataSource ds = new SaxonXQDataSource();
 	      XQConnection conn = ds.getConnection();
-	      XQPreparedExpression exp = conn.prepareExpression(inputStream);
+	    //  XQPreparedExpression exp = conn.prepareExpression(inputStream);
+	       XQPreparedExpression exp = conn.prepareExpression(input);
+	      
 	      XQResultSequence result = exp.executeQuery();
 	      
 	      while (result.next()) {
