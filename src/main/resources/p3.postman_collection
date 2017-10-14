@@ -1,0 +1,170 @@
+{
+	"variables": [],
+	"info": {
+		"name": "p3",
+		"_postman_id": "cf3e0506-f220-938d-a547-3fab87fa6283",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "request3",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/data_service_root/class-and-type?&select=Class C,Class LR, Learner, Unrestricted&orderby=Class C&filter=quarter eq 2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data_service_root",
+						"class-and-type"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "Class C,Class LR, Learner, Unrestricted",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "orderby",
+							"value": "Class C",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "filter",
+							"value": "quarter eq 2",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"val1\": \"Hello\",\n\t\"val2\": \"World\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "request1",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/data_service_root/class-and-type?&filter=quarter eq 1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data_service_root",
+						"class-and-type"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "quarter eq 1\n\n",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"val1\": \"Hello\",\n\t\"val2\": \"World\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "request2",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/data_service_root/class-and-type?&filter=quarter eq 1 and postcode eq 2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data_service_root",
+						"class-and-type"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "quarter eq 1 and postcode eq 2000",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"val1\": \"Hello\",\n\t\"val2\": \"World\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
