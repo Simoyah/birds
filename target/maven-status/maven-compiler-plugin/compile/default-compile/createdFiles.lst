@@ -1,4 +1,5 @@
-au/edu/unsw/soacourse/dataservice/XQuery.class
-au/edu/unsw/soacourse/dataservice/ClassAndType.class
 au/edu/unsw/soacourse/dataservice/queryResult.class
+au/edu/unsw/soacourse/dataservice/XQuery.class
+au/edu/unsw/soacourse/dataservice/fileLocation.class
+au/edu/unsw/soacourse/dataservice/ClassAndType.class
 au/edu/unsw/soacourse/dataservice/htmlToxml.class

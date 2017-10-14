@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class XQuery{
 		 List<queryResult> list = new ArrayList<queryResult>();
 		
 		 String res = "";
-	
+	    
 		  InputStream inputStream = new FileInputStream(new File(input));
 		  XQDataSource ds = new SaxonXQDataSource();
 	      XQConnection conn = ds.getConnection();

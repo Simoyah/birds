@@ -2,6 +2,7 @@ package au.edu.unsw.soacourse.dataservice;
 
 
 import java.io.FileNotFoundException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,17 +28,20 @@ public class ClassAndType {
     		 @QueryParam("select") String select, @QueryParam("orderby") String orderby) throws FileNotFoundException, XQException {
     	
     	 if(filter.equals("quarter eq 1")){
-        	filter_by_quarter_result = XQuery.xQueryResult("/Users/janechen/cs9322-Prac/workspace/data_service_root/filter_by_quarter.xqy");
+        	filter_by_quarter_result = XQuery.xQueryResult("/Users/janechen/cs9322-Prac/workspace/data_service_root/src/main/resources/filter_by_quarter.xqy");
+       //  String file1=new ClassAndType().getClass().getClassLoader().getResource("filter_by_quarter.xqy").toString();
+        //	System.out.println("the file location is:"+""+file1);
+    	//	 filter_by_quarter_result = XQuery.xQueryResult(file1);
         	return filter_by_quarter_result;
         }
         
     	 if(filter.equals("quarter eq 1 and postcode eq 2000")){
-        	filter_by_quarter_and_postcode_result = XQuery.xQueryResult("/Users/janechen/cs9322-Prac/workspace/data_service_root/filter_by_quarter_and_postcode.xqy");
+        	filter_by_quarter_and_postcode_result = XQuery.xQueryResult("/Users/janechen/cs9322-Prac/workspace/data_service_root/src/main/resources/filter_by_quarter_and_postcode.xqy");
         	return filter_by_quarter_and_postcode_result;
         }
         
         if(select.equals("Class C,Class LR, Learner, Unrestricted") && orderby.equals("Class C") && filter.equals("quarter eq 2")){
-        	filter_by_select_orderby_and_quarter_result = XQuery.xQueryResult("/Users/janechen/cs9322-Prac/workspace/data_service_root/filter_by_select_orderby_quarter.xqy");
+        	filter_by_select_orderby_and_quarter_result = XQuery.xQueryResult("/Users/janechen/cs9322-Prac/workspace/data_service_root/src/main/resources/filter_by_select_orderby_quarter.xqy");
         	return filter_by_select_orderby_and_quarter_result;
         }
         
